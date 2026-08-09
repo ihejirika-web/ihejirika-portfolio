@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= Header ================= -->
+
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">ShopEase</h1>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+      </nav>
+    </header>
+
+    <!-- ================= Hero Section ================= -->
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Welcome to ShopEase</h2>
+
+        <p>
+          Discover amazing products at affordable prices. Shop with confidence
+          and enjoy fast delivery.
+        </p>
+
+        <button class="shop-btn" id="shop-btn">Shop Now</button>
+      </div>
+    </section>
+
+    <!-- ================= Search ================= -->
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="🔍 Search products..."
+      />
+    </div>
+
+    <!-- ================= About ================= -->
+
+    <section id="about" class="about">
+      <h2>About ShopEase</h2>
+
+      <p>
+        ShopEase is a modern online shopping platform built with HTML, CSS, and
+        JavaScript. It demonstrates product searching, shopping cart management,
+        Local Storage, responsive design, and a clean user experience.
+      </p>
+    </section>
+
+    <!-- ================= Contact ================= -->
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+
+      <p>📧 Email: support@shopease.com</p>
+
+      <p>Phone 📞 +1 (234) 567-8901</p>
+
+      <p>📍 Location: Lagos, Nigeria</p>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+
+      <div class="product-container">
+        <!-- Headphones -->
+        <div class="product-card">
+          <img src="headphones.jpg 1.jpeg" alt="Wireless Headphones" />
+          <h3>Wireless Headphones</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="headphones.jpg 2.jpeg" alt="Wireless Headphones" />
+          <h3>Wireless Headphones</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="headphones.jpg 3.jpeg" alt="Wireless Headphones" />
+          <h3>Wireless Headphones</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Watches -->
+        <div class="product-card">
+          <img src="watch.jpg 1.jpeg" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$120</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="watch.jpg 2.jpeg" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$120</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="watch.jpg 3.jpeg" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$120</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="watch.jpg 4.jpeg" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$120</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Laptops -->
+        <div class="product-card">
+          <img src="Laptop.jpg 1.jpeg" alt="Laptop" />
+          <h3>Laptop</h3>
+          <p>$850</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop.jpg 2.jpeg" alt="Laptop" />
+          <h3>Laptop</h3>
+          <p>$850</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop.jpg 3.jpeg" alt="Laptop" />
+          <h3>Laptop</h3>
+          <p>$850</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Smartphones -->
+        <div class="product-card">
+          <img src="Smartphone.jpg 1.jpeg" alt="Smartphone" />
+          <h3>Smartphone</h3>
+          <p>$750</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Smartphone.jpg 2.jpeg" alt="Smartphone" />
+          <h3>Smartphone</h3>
+          <p>$750</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Smartphone.jpg 3.jpeg" alt="Smartphone" />
+          <h3>Smartphone</h3>
+          <p>$750</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Gaming Mouse -->
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 1.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 2.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 3.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 4.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 5.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Gaming mouse.jpg 6.jpeg" alt="Gaming Mouse" />
+          <h3>Gaming Mouse</h3>
+          <p>$80</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Bluetooth Speakers -->
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 1.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 2.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 3.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 4.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 5.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Bluetooth speaker.jpg 6.jpeg" alt="Bluetooth Speaker" />
+          <h3>Bluetooth Speaker</h3>
+          <p>$150</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Laptop Mouse -->
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 1.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 2.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 3.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 4.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 5.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 6.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 7.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="Laptop mouse.jpg 8.jpeg" alt="Laptop Mouse" />
+          <h3>Laptop Mouse</h3>
+          <p>$40</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <section class="cart">
+        <h2>Shopping Cart</h2>
+
+        <div id="cart-items">
+          <p>Your cart is empty.</p>
+        </div>
+
+        <h3>Total: <span id="total-price">$0</span></h3>
+
+        <input
+          type="text"
+          id="search-input"
+          placeholder="🔍 Search products..."
+        />
+
+        <div class="cart-buttons">
+          <button id="clear-cart-btn">🗑️ Clear Cart</button>
+          <button id="checkout-btn">💳 Checkout</button>
+        </div>
+      </section>
+
+      <!-- ================= Footer ================= -->
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <h2>ShopEase</h2>
+            <p>Your trusted online shopping destination.</p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>📧 support@shopease.com</p>
+            <p>📞 +1 (234) 567-8901</p>
+          </div>
+
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter (X)</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+
+        <hr />
+
+        <p class="copyright">© 2026 ShopEase. All Rights Reserved.</p>
+      </footer>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
