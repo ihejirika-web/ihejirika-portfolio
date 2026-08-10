@@ -61,17 +61,21 @@ addCartButtons.forEach((button) => {
     updateCart();
   });
 });
-if (shopButton && productsSection) {
-  shopButton.addEventListener("click", () => {
-    productsSection.scrollIntoView({ behavior: "smooth" });
-  });
-}
-if (searchInput) {
-  searchInput.addEventListener("keyup", () => {
-    const searchText = searchInput.value.toLowerCase();
-    productCards.forEach((card) => {
-      const productName = card.querySelector("h3").textContent.toLowerCase();
-      card.style.display = productName.includes(searchText) ? "block" : "none";
+if (searchInput && productCards.length > 0) {
+  searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.trim().toLowerCase();
+
+    productCards.forEach(function (card) {
+      const productName = card
+        .querySelector("h3")
+        .textContent
+        .toLowerCase();
+
+      if (productName.includes(searchText)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
     });
   });
 }
