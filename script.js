@@ -1,158 +1,86 @@
-// =============================
-// DARK / LIGHT MODE
-// =============================
+const display = document.querySelector(".display");
 
-const themeToggle = document.getElementById("themeToggle");
+const seven = document.querySelector("#seven");
+const eight = document.querySelector("#eight");
+const nine = document.querySelector("#nine");
+const four = document.querySelector("#four");
+const five = document.querySelector("#five");
+const six = document.querySelector("#six");
+const one = document.querySelector("#one");
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
+const zero = document.querySelector("#zero");
+const clear = document.querySelector("#clear");
+const add = document.querySelector("#add");
+const equals = document.querySelector("#equals");
+const subtracts = document.querySelector("#subtract");
+const multiply = document.querySelector("#multiply");
+const divide = document.querySelector("#divide");
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+seven.addEventListener("click", function () {
+  display.value += "7";
+});
 
-  if (document.body.classList.contains("dark-mode")) {
-    themeToggle.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("theme", "light");
+eight.addEventListener("click", function () {
+  display.value += "8";
+});
+
+nine.addEventListener("click", function () {
+  display.value += "9";
+});
+
+four.addEventListener("click", function () {
+  display.value += "4";
+});
+
+five.addEventListener("click", function () {
+  display.value += "5";
+});
+
+six.addEventListener("click", function () {
+  display.value += "6";
+});
+
+one.addEventListener("click", function () {
+  display.value += "1";
+});
+
+two.addEventListener("click", function () {
+  display.value += "2";
+});
+
+three.addEventListener("click", function () {
+  display.value += "3";
+});
+
+zero.addEventListener("click", function () {
+  display.value += "0";
+});
+
+clear.addEventListener("click", function () {
+  display.value = "";
+});
+
+add.addEventListener("click", function () {
+  display.value += "+";
+});
+
+equals.addEventListener("click", function () {
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = "Error";
   }
 });
 
-// =============================
-// REMEMBER USER'S THEME
-// =============================
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "dark") {
-  document.body.classList.add("dark-mode");
-  themeToggle.textContent = "☀️";
-} else {
-  themeToggle.textContent = "🌙";
-}
-// =============================
-// TYPING EFFECT
-// =============================
-
-const typingText = document.getElementById("typing");
-
-const words = [
-  "Aspiring Full-Stack Web Developer",
-  "Frontend Developer",
-  "JavaScript Developer",
-  "Future Software Engineer",
-];
-
-let wordIndex = 0;
-let characterIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-  const currentWord = words[wordIndex];
-
-  if (isDeleting) {
-    typingText.textContent = currentWord.substring(0, characterIndex - 1);
-
-    characterIndex--;
-  } else {
-    typingText.textContent = currentWord.substring(0, characterIndex + 1);
-
-    characterIndex++;
-  }
-
-  let speed = isDeleting ? 60 : 100;
-
-  if (!isDeleting && characterIndex === currentWord.length) {
-    speed = 1500;
-    isDeleting = true;
-  }
-
-  if (isDeleting && characterIndex === 0) {
-    isDeleting = false;
-    wordIndex++;
-
-    if (wordIndex === words.length) {
-      wordIndex = 0;
-    }
-
-    speed = 500;
-  }
-
-  setTimeout(typeEffect, speed);
-}
-
-typeEffect();
-// =============================
-// CONTACT BUTTON
-// =============================
-
-const contactBtn = document.getElementById("contactBtn");
-
-if (contactBtn) {
-  contactBtn.addEventListener("click", () => {
-    window.location.href = "mailto:onyeihejirika@gmail.com";
-  });
-}
-// =============================
-// PROJECT LINKS
-// =============================
-
-const projectLinks = document.querySelectorAll(".project-btn");
-
-projectLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    link.style.transform = "scale(0.97)";
-
-    setTimeout(() => {
-      link.style.transform = "";
-    }, 150);
-  });
+subtract.addEventListener("click", function () {
+  display.value += "-";
 });
 
-// =============================
-// EXTERNAL LINKS
-// =============================
-
-const externalLinks = document.querySelectorAll('a[target="_blank"]');
-
-externalLinks.forEach((link) => {
-  link.setAttribute("rel", "noopener noreferrer");
+multiply.addEventListener("click", function () {
+  display.value += "*";
 });
-// =============================
-// FINAL PORTFOLIO POLISH
-// =============================
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Add current year automatically to the footer
-  const copyright = document.querySelector(".copyright");
-
-  if (copyright) {
-    copyright.innerHTML = `© ${new Date().getFullYear()} Ihejirika Alexander Onyeka. All Rights Reserved.`;
-  }
-
-  // Highlight navigation link while scrolling
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  window.addEventListener("scroll", () => {
-    let currentSection = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 150;
-      const sectionHeight = section.offsetHeight;
-
-      if (
-        window.scrollY >= sectionTop &&
-        window.scrollY < sectionTop + sectionHeight
-      ) {
-        currentSection = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-
-      if (link.getAttribute("href") === `#${currentSection}`) {
-        link.classList.add("active");
-      }
-    });
-  });
+divide.addEventListener("click", function () {
+  display.value += "/";
 });
