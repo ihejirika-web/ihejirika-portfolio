@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchInput,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+#addBtn {
+  width: 100%;
+  padding: 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #005fcc;
+}
+
+.note {
+  background: #fff9c4;
+  border-left: 6px solid orange;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.note p {
+  margin-bottom: 10px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.note button {
+  width: auto;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+}
+
+.edit-btn {
+  background: green;
+  color: white;
+}
+
+.pin-btn {
+  background: orange;
+  color: white;
+}
+
+.time {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.pin-btn {
+  background: orange;
+  color: white;
+}
+
+.note.pinned {
+  border-left: 6px solid gold;
+  background: #fff8dc;
+}
