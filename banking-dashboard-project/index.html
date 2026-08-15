@@ -1,1 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🏦 Banking Dashboard</h1>
 
+      <!-- Summary Cards -->
+      <div class="summary">
+        <div class="card income">
+          <h3>Income</h3>
+          <p id="income">$0.00</p>
+        </div>
+
+        <div class="card expense">
+          <h3>Expense</h3>
+          <p id="expense">$0.00</p>
+        </div>
+
+        <div class="card balance-card">
+          <h3>Balance</h3>
+          <p id="balance">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Amount Input -->
+      <input type="number" id="amount" placeholder="Enter Amount" />
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button id="depositBtn">Deposit</button>
+        <button id="withdrawBtn">Withdraw</button>
+      </div>
+
+      <!-- Search -->
+      <input type="text" id="search" placeholder="Search transactions..." />
+
+      <!-- Transaction History -->
+      <h2>Transaction History</h2>
+
+      <div id="history"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
